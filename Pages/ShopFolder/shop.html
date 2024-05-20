@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeverFunds - Bank</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body data-page="shop">
+
+    <div class="nav-container">
+
+        <div class="logo-img-container">
+            <a href="/index.html">
+                <img class="logo-img" src="/Icons and Images/Nav Bar Logo.png" alt="ForeverFunds logo">
+            </a>
+        </div>
+
+        <div class="nav-title-container">
+            <a class="nav-title" href="/index.html">
+                <h1>ForeverFunds</h1>
+            </a>
+        </div>
+
+        <div class="nav-links-container">
+            <a class="nav-links" id="home-nav-link" href="/index.html">Home</a>
+            <a class="nav-links" id="bank-nav-link" href="/Pages/BankFolder/bank.html">Bank</a>
+            <a class="nav-links" id="shop-nav-link" href="/Pages/ShopFolder/shop.html">Shop</a>
+            <a class="nav-links" id="work-nav-link" href="/Pages/WorkFolder/work.html">Work</a>
+        </div>
+
+    </div>
+    
+    <div class="shop-header">
+        <img class="shop-icon" src="/Icons and Images/Icons/Shop-icon.png" alt="ForeverFunds Logo">
+    </div>
+    
+    <div class="shop-container">
+
+
+        <div id="shop-bank-balance-container" class="shop-bank-balance-container">
+            <div id="shop-bank-balance-card" class="shop-bank-balance-card">
+                <div id="bank-balance"></div>
+            </div>
+        </div>
+
+        <div class="bottom-cards-container">
+            
+            <div class="computer-selector-container">
+                <div class="features-bg">
+                    <h2 class="computer-selector-title">Select Computer</h2>
+                    <select id="computer-list" class="computer-list" name="computer-list">
+                        <option value="" disabled selected >Select an option</option>
+                    </select>
+
+                    <h3 class="features-title">Features</h3>
+                    <ul id="computer-features" class="computer-features"></ul>
+                </div>
+            </div>
+    
+            <div class="computer-buy-container">
+                <div class="computer-buy-bg">
+                    
+                    <div class="computer-card-start">
+                        <img id="computer-image" src="/Icons and Images/Nav Bar Logo.png" alt="image of computer">
+                    </div>
+                    <div class="computer-card-middle">
+                        <h4 id="computer-name" class="computer-name">Choose your computer</h4>
+                        <p id="computer-description" class="computer-description">
+                            Select a computer to see details
+                        </p>
+                    </div>
+                    <div class="computer-card-end">
+                        <h5 id="computer-price" class="computer-price">Choose a computer</h5>
+                        <button id="buy-button" onclick="" class="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="module" src="/main.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,375 @@
+/* ----- BIG SCREENS ----- */
+@media only screen and ( min-width: 768px) { 
+
+    html, body{
+        margin: 0;
+        padding: 0;
+        background-color: grey;
+        /* color: white; */
+    }
+
+    :root {
+        --dark-gold: #b5711e;
+        ---mild-dark-gold: #b87a30;
+        --light-gold: #f9b262;
+        --mild-dark: rgb(53, 51, 51);
+
+        --adobe-yellow-gold:#F0DE24;
+        --adobe-gold-gold:#F0C524;
+        --adobe-washed-gold:#F0C774;
+        --adobe-light-gold:#F9B262;
+        --adobe-dark-gold:#F0AC24;
+        --adobe-brown-gold:#B5551F;
+
+        --theme-blue:#69b8d4;
+        --theme-blue-light:#7cc7e2;
+        --theme-green:#4bf0a1;
+        --theme-dark-green:#30b454;
+    }
+
+    button:hover {
+        background-color: var(--adobe-gold-gold);
+        color: black; 
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 45px;
+        background-color: rgb(53, 51, 51); 
+    }
+
+    .nav-logo-container {
+        flex: 1;
+    }
+    .nav-links-container {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 3rem;
+    }
+
+    .logo-img {
+        width: 90px; 
+        height: 90px; 
+    }
+
+    .nav-title-container {
+        flex: 0 1 auto;
+        text-align: center;
+        font-size: 25px;
+        text-shadow: 2px 2px black;
+        text-decoration: underline;
+    }
+    .nav-title {
+        color: var(--adobe-light-gold);
+    }
+
+    .nav-links  {
+        color: var(--light-gold);
+        text-decoration: none;
+
+        text-shadow: 1px var(--adobe-gold-gold);
+        font-size: 35px;
+        gap: 2.5rem;
+        transition: font-size 1s;
+        /* animation-timing-function: ease; */
+    }
+
+    .nav-container > a:visited {
+        color: var(--adobe-light-gold);
+        text-decoration: none;
+    }
+
+    .nav-links:hover {
+        color: var(--adobe-yellow-gold);
+
+        /* animation: hover-jump 1s 0s 1 normal linear; */
+        animation-name: hover-jump;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: normal;
+
+        font-size: 45px;
+        gap: 2.5rem;
+    }
+    @keyframes hover-jump {
+        0% {transform: translateY(0)} 
+        50% {transform: translateY(-8px)}
+        100% {transform: translateY(1)}
+    }
+
+    @keyframes hover-colorchange {
+        /* Tiny glow effect */
+        25% {color: var(--adobe-light-gold);}
+        35% {color: var(--adobe-dark-gold);}
+        50% {color: var(--adobe-light-gold);}
+        75% {color: var(--adobe-dark-gold);}
+        100% {color: var(--adobe-light-gold);}
+    }
+
+    .bank-header {
+        display: flex;
+        background-color: rgb(33, 33, 33);
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .bank-icon {
+        width: 280px;
+        height: 280px; 
+
+    }
+
+    .bank-card-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px; 
+        margin: 10px auto 20px auto;
+        
+        height: 400px; 
+        width: 550px; 
+        background-color: var(--mild-dark);
+        border-radius: 25px;
+        box-shadow: 10px 5px 5px var(---mild-dark-gold);
+    }
+
+    .bank-card-container > * {
+        color: whitesmoke;
+    }
+
+    .user-name {
+        text-align: center;
+        display: block;
+        font-size: 40px;
+        margin: 15px 0 10px 0;
+        padding: 0;
+    }
+
+    .balance-container {
+        display: flex;
+        justify-content: space-around;
+        /* font-size: x-large; */
+        font-size: 30px;
+        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+    }
+
+    .active-loan-container {
+        display: flex;
+        justify-content: space-around;
+        font-size: x-large;
+        font-size: 30px;
+        text-shadow: 0 4px 30px  var(--adobe-brown-gold);
+    }
+
+    .get-loan-button {
+        width: 250px;
+        height: 60px;
+        margin: auto;
+        color: black;
+        font-size: large;
+        background-color: var(--adobe-light-gold);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .get-loan-button:hover {
+        -webkit-box-shadow:0px 0px 51px 5px #F0AC24;
+        -moz-box-shadow: 0px 0px 51px 5px #F0AC24;
+        box-shadow: 0px 0px 51px 5px #F0AC24;
+
+        width: 310px;
+        height: 80px;
+    }
+
+    .input-loan-container {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 20px;
+        /* bottom: 10%; */
+        /* right: 35.5%; */
+        /* width: 400px; */
+
+        color: black;
+        font-weight: bold;
+        
+        background-color: var(--adobe-gold-gold);
+        border-radius: 25px;
+        -webkit-box-shadow:0px 0px 51px 5px #F0AC24;
+        -moz-box-shadow: 0px 0px 51px 5px #F0AC24;
+        box-shadow: 0px 0px 51px 5px #F0AC24;
+    }
+
+    .input-box-label {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .input-box {
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+}
+
+/* ----- SMALL SCREENS ----- */
+@media only screen and ( max-width: 767px ) {
+
+    html, body{
+        margin: 0;
+        padding: 0;
+        background-color: grey;
+        color: white;
+    }
+
+    :root {
+        --dark-gold: #b5711e;
+        ---mild-dark-gold: #b87a30;
+        --light-gold: #f9b262;
+        --mild-dark: rgb(53, 51, 51);
+
+        --adobe-yellow-gold:#F0DE24;
+        --adobe-gold-gold:#F0C524;
+        --adobe-washed-gold:#F0C774;
+        --adobe-light-gold:#F9B262;
+        --adobe-dark-gold:#F0AC24;
+        --adobe-brown-gold:#B5551F;
+
+        --theme-blue:#69b8d4;
+        --theme-blue-light:#7cc7e2;
+        --theme-green:#4bf0a1;
+        --theme-dark-green:#30b454;
+    }
+
+    button:hover {
+        background-color: var(--adobe-gold-gold);
+        color: black; 
+    }
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        background-color: rgb(53, 51, 51);
+    }
+
+    /* .logo-img-container, .nav-title-container, .nav-links-container {
+        flex: none;
+        width: 100svw; 
+        text-align: center;
+    } */
+
+
+    .nav-links-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 20px;
+    }
+    .nav-title-container {
+        display: none;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* .nav-title {
+        color: var(--adobe-light-gold);
+    } */
+
+    .nav-links  {
+        color: var(--light-gold);
+        text-decoration: none;
+
+        text-shadow: 1px var(--adobe-gold-gold);
+        font-size: 35px;
+        transition: font-size 1s;
+    }
+
+    .nav-container > a:visited {
+        color: var(--adobe-light-gold);
+        text-decoration: none;
+    }
+
+    .nav-links:hover {
+        font-size: 25px;
+        gap: 2.5rem;
+    }
+
+    .bank-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+
+        background-color: rgb(33, 33, 33);
+        padding: 15px 10px;
+    }
+
+    .bank-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bank-card-container {
+        display: flex;
+        flex-direction: column;
+
+        height: 370px;
+        width: 350px;
+
+        padding-bottom: 10px;
+        margin:  0 auto 0 auto;
+
+        background-color: var(--mild-dark);
+        border-radius: 25px;
+        box-shadow: 10px 5px 5px var(---mild-dark-gold);
+    }
+
+    .user-name {
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .balance-container {
+        display: flex;
+        justify-content: space-around;
+        /* font-size: x-large; */
+        font-size: 30px;
+        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        
+    }
+
+    .active-loan-container {
+        display: flex;
+        justify-content: space-around;
+        /* font-size: x-large; */
+        font-size: 30px;
+        text-shadow: 0 4px 30px  var(--adobe-brown-gold);
+    }
+    .active-loan-container > * {
+        margin: 0 0 0 0;
+    }
+
+    .get-loan-button {
+        width: 250px;
+        height: 60px;
+        margin: auto;
+        color: black;
+        font-size: large;
+        background-color: var(--adobe-light-gold);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
