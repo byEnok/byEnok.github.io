@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return registeredUser
         }
         function createUserName() {
-            const userName = prompt("Enter your name", "Warren West")
+            const userName = prompt("Enter your name")
             if (userName === null || userName.trim() === "") {
                 alert("That's okay! You can always come back if you change your mind. \nEnjoy your stay!")
                 
