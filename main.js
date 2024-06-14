@@ -1,7 +1,7 @@
 
-import bankFunctions from "./Pages/BankFolder/bank.js";
-import shopFunctions from "./Pages/ShopFolder/shop.js";
-import workFunctions from "./Pages/WorkFolder/work.js";
+import bankFunctions from "../byenok.github.io/Pages/BankFolder/bank.js";
+import shopFunctions from "../byenok.github.io/Pages/ShopFolder/shop.js";
+import workFunctions from "../byenok.github.io/Pages/WorkFolder/work.js"
 
 
 document.addEventListener('DOMContentLoaded', () => { 

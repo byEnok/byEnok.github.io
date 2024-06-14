@@ -4,13 +4,15 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         /* color: white; */
     }
 
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        --mild-dark-gold: rgb(184, 122, 48, 0.4);
+        /* ---mild-dark-gold: #b87a30; */
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
 
@@ -62,45 +64,53 @@
         text-shadow: 2px 2px black;
         text-decoration: underline;
     }
+
     .nav-title {
         color: var(--adobe-light-gold);
     }
 
-    .nav-links  {
-        color: var(--light-gold);
-        text-decoration: none;
+   .nav-links {
+       color: var(--light-gold);
+       text-decoration: none;
 
-        text-shadow: 1px var(--adobe-gold-gold);
-        font-size: 35px;
-        gap: 2.5rem;
-        transition: font-size 1s;
-        /* animation-timing-function: ease; */
-    }
+       text-shadow: 1px var(--adobe-gold-gold);
+       font-size: 35px;
+       gap: 2.5rem;
+       transition: font-size 0.3s;
+   }
 
-    .nav-container > a:visited {
-        color: var(--adobe-light-gold);
-        text-decoration: none;
-    }
+   .nav-container>a:visited {
+       color: var(--adobe-light-gold);
+       text-decoration: none;
+   }
 
-    .nav-links:hover {
-        color: var(--adobe-yellow-gold);
+   .nav-links:hover {
+       /* animation: hover-jump 1s 0s 1 normal linear; */
+       animation-name: hover-jump;
+       animation-duration: 1s;
+       animation-delay: 0s;
+       animation-iteration-count: infinite;
+       animation-timing-function: ease-in-out;
+       animation-direction: normal;
+       color: var(--adobe-yellow-gold);
 
-        /* animation: hover-jump 1s 0s 1 normal linear; */
-        animation-name: hover-jump;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-direction: normal;
+       font-size: 38px;
+       /* gap: 2.5rem; */
+   }
 
-        font-size: 45px;
-        gap: 2.5rem;
-    }
-    @keyframes hover-jump {
-        0% {transform: translateY(0)} 
-        50% {transform: translateY(-8px)}
-        100% {transform: translateY(1)}
-    }
+   @keyframes hover-jump {
+       0% {
+           transform: translateY(0)
+       }
+
+       50% {
+           transform: translateY(-1px)
+       }
+
+       100% {
+           transform: translateY(0)
+       }
+   }
 
     @keyframes hover-colorchange {
         /* Tiny glow effect */
@@ -114,32 +124,44 @@
     .bank-header {
         display: flex;
         background-color: rgb(33, 33, 33);
+        /* background-color: grey; */
         justify-content: center;
         align-items: center;
         padding: 10px 0;
     }
 
     .bank-icon {
-        width: 280px;
-        height: 280px; 
-
+        width: 230px;
+        height: 230px;
+        padding: 20px 0 20px 0;
     }
 
     .bank-card-container {
         display: flex;
         flex-direction: column;
-        padding: 20px; 
-        margin: 10px auto 20px auto;
+        padding: 30px; 
+        margin: 10px auto 50px auto;
         
-        height: 400px; 
+        /* min-height: 400px;  */
         width: 550px; 
         background-color: var(--mild-dark);
         border-radius: 25px;
-        box-shadow: 10px 5px 5px var(---mild-dark-gold);
+        /* box-shadow: 3.5px 2px 2px var(---mild-dark-gold); */
+        box-shadow: 10px 5px 10px var(--mild-dark-gold);
+    }
+
+    .bank-card-container:hover {
+        -webkit-box-shadow: 0px 0px 10px 3px #F9B262;
+        -moz-box-shadow: 0px 0px 10px 3px #F9B262;
+        box-shadow: 10px 5px 10px #F9B262;
     }
 
     .bank-card-container > * {
         color: whitesmoke;
+    }
+
+    .line-break {
+        width: 450px;
     }
 
     .user-name {
@@ -155,7 +177,7 @@
         justify-content: space-around;
         /* font-size: x-large; */
         font-size: 30px;
-        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        text-shadow: 0.5px 0.5px 10px var(--adobe-gold-gold);
     }
 
     .active-loan-container {
@@ -163,7 +185,7 @@
         justify-content: space-around;
         font-size: x-large;
         font-size: 30px;
-        text-shadow: 0 4px 30px  var(--adobe-brown-gold);
+        text-shadow: 0 4px 10px  var(--adobe-brown-gold);
     }
 
     .get-loan-button {
@@ -177,12 +199,13 @@
         cursor: pointer;
     }
     .get-loan-button:hover {
-        -webkit-box-shadow:0px 0px 51px 5px #F0AC24;
-        -moz-box-shadow: 0px 0px 51px 5px #F0AC24;
-        box-shadow: 0px 0px 51px 5px #F0AC24;
+        -webkit-box-shadow: 0px 0px 5px 3px #F0AC24;
+        -moz-box-shadow: 0px 0px 5px 3px #F0AC24;
+        box-shadow: 0px 0px 5px 3px #F0AC24;
+            
 
-        width: 310px;
-        height: 80px;
+        /* width: 310px;
+        height: 80px; */
     }
 
     .input-loan-container {
@@ -222,13 +245,14 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         color: white;
     }
 
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        ---mild-dark-gold: rgb(184, 122, 48, 0.4);
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
 
@@ -333,6 +357,10 @@
         box-shadow: 10px 5px 5px var(---mild-dark-gold);
     }
 
+        .line-break {
+            width: 250px;
+        }
+
     .user-name {
         text-align: center;
         display: block;
@@ -347,7 +375,8 @@
         justify-content: space-around;
         /* font-size: x-large; */
         font-size: 30px;
-        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        /* color: black; */
+        text-shadow: 0.5px 0.5px 3px var(--adobe-gold-gold);
         
     }
 
@@ -356,7 +385,7 @@
         justify-content: space-around;
         /* font-size: x-large; */
         font-size: 30px;
-        text-shadow: 0 4px 30px  var(--adobe-brown-gold);
+        text-shadow: 0 4px 3px  var(--adobe-brown-gold);
     }
     .active-loan-container > * {
         margin: 0 0 0 0;

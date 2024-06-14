@@ -84,7 +84,14 @@ function setComputerDetails(computers) {
     if (selectedComputer) {
 
         selectedComputer.image === `assets/images/${selectedId}.png` ? computerImage.src = pngUrl : computerImage.src = jpgUrl
-        selectedComputer.image === 'true' ? computerImage.alt = `Picture of ${computerName.innerHTML}` : computerImage.alt = `${computerName.innerHTML} computer has no image`
+        // Old tries below
+        // selectedComputer.image ? computerImage.alt = `Picture of ${computerName.innerHTML}` : computerImage.alt = `${computerName.innerHTML} computer has no image`
+        // computerImage.alt = selectedComputer.image ? `Picture of ${computerName.innerHTML}` : `${computerName.innerHTML} computer has no image`;
+        if (selectedComputer.image = 'the visor') {
+            computerImage.alt = `${computerName.innerHTML} computer has no image`
+        } else {
+            computerImage.alt = `Picture of ${computerName.innerHTML}`
+        }
         computerName.innerHTML = selectedComputer.title
         computerDescription.innerHTML = selectedComputer.description
         computerPrice.innerHTML = `${selectedComputer.price} Kr`

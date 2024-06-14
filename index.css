@@ -4,13 +4,14 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         /* color: white; */
     }
 
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        --mild-dark-gold: #b87a30;
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
 
@@ -36,8 +37,8 @@
     }
     .nav-container {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
         padding: 0 45px;
         background-color: rgb(53, 51, 51);
         position: sticky;
@@ -73,43 +74,41 @@
     }
 
 
-    .nav-links  {
+    .nav-links {
         color: var(--light-gold);
         text-decoration: none;
 
         text-shadow: 1px var(--adobe-gold-gold);
         font-size: 35px;
         gap: 2.5rem;
-        transition: font-size 1s;
-        /* animation-timing-function: ease; */
+        transition: font-size 0.3s;
     }
 
     .page-icon-container > a {
         text-decoration: none;
     }
-    .nav-container > a:visited {
-        color: var(--adobe-light-gold);
-        text-decoration: none;
-    }
+   .nav-container>a:visited {
+       color: var(--adobe-light-gold);
+       text-decoration: none;
+   }
 
-    .nav-links:hover {
-        color: var(--adobe-yellow-gold);
+   .nav-links:hover {
+       /* animation: hover-jump 1s 0s 1 normal linear; */
+       animation-name: hover-jump;
+       animation-duration: 1s;
+       animation-delay: 0s;
+       animation-iteration-count: infinite;
+       animation-timing-function: ease-in-out;
+       animation-direction: normal;
+       color: var(--adobe-yellow-gold);
 
-        /* animation: hover-jump 1s 0s 1 normal linear; */
-        animation-name: hover-jump-nav-links;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-direction: normal;
-
-        font-size: 45px;
-        gap: 2.5rem;
-    }
+       font-size: 38px;
+       /* gap: 2.5rem; */
+   }
     @keyframes hover-jump-nav-links {
         0% {transform: translateY(0)} 
-        50% {transform: translateY(-8px)}
-        100% {transform: translateY(1)}
+        50% {transform: translateY(-1px)}
+        100% {transform: translateY(0)}
     }
 
     @keyframes hover-colorchange {
@@ -209,11 +208,14 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 10px;
-        border: 5px solid black;
+        padding: 30px;
+        /* margin: 20px; */
+        border: 2px solid black;
         background-color: rgb(55, 54, 54);
         border-radius: 25px;
-        color: var(--light-gold);
+        color: var(--adobe-gold-gold);
+        /* color: var(--light-gold); */
+        box-shadow: 5px 6px 0px 0px var(--mild-dark-gold);
     }
 
     .page-icon:hover {
@@ -222,7 +224,7 @@
         -moz-box-shadow: 0px 0px 56px 19px #F9B262;
         box-shadow: 0px 0px 56px 19px #F9B262; */
 
-        border: 4px solid var(--adobe-dark-gold);
+        border: 2px solid var(--adobe-dark-gold);
         /* background-color: var(--adobe-gold-gold); */
 
         /* Sharper Glow */
@@ -232,19 +234,22 @@
 
 
         /* Bigger Glow */
-        -webkit-box-shadow:0px 0px 116px 42px #F9B262;
+        /* -webkit-box-shadow:0px 0px 116px 42px #F9B262;
         -moz-box-shadow: 0px 0px 116px 42px #F9B262;
-        box-shadow: 0px 0px 116px 42px #F9B262;
-    }
+        box-shadow: 0px 0px 116px 42px #F9B262; */
 
-    .page-icon > * {
-        padding: 15px 0;
+        -webkit-box-shadow: 0px 5px 2px 2px #F9B262;
+        -moz-box-shadow: 0px 5px 2px 2px #F9B262;
+        box-shadow: 2px 5px 11px 2px #F9B262;
     }
 
     .icon-title {
         width: 100%;
         font-weight: bold;
         font-size: xxx-large;
+        color: var(--adobe-gold-gold);
+        text-align: center;
+        padding: 0px 0 40px 0;
         
     }
 
@@ -277,14 +282,18 @@
     }
 
     .reset-storage-button:hover {
-        -webkit-box-shadow:0px 0px 116px 22px #B5551F;
-        -moz-box-shadow: 0px 0px 116px 22px #B5551F;
-        box-shadow: 0px 0px 116px 22px #B5551F;
+        /* -webkit-box-shadow: 0px 0px 90px 5px #B5551F; */
+        /* -moz-box-shadow:  0px 0px 90px 5px #B5551F; */
+        /* box-shadow:  0px 0px 90px 5px #B5551F; */
 
-        width: 210px;
-        height: 90px;
+        -webkit-box-shadow: 0px 2px 90px 2px #B5551F;
+        -moz-box-shadow: 0px 2px 90px 2px #B5551F;
+        box-shadow: 0px 2px 90px 2px #B5551F;
+
+        width: 203px;
+        height: 83px;
         /* color: var(--adobe-gold-gold); */
-        font-size: 18px;
+        font-size: 16.5px;
 
     }
 }
@@ -296,13 +305,14 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         color: white;
     }
     
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        ---mild-dark-gold: rgb(184, 122, 48, 0.4);
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
     
@@ -319,10 +329,10 @@
     
     }
 
-    button:hover {
+    /* button:hover {
         background-color: var(--adobe-gold-gold);
         color: black; 
-    }
+    } */
     .nav-container {
         display: flex;
         flex-direction: column;
@@ -445,22 +455,51 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 25px;
-        border: 5px solid black;
+        padding: 30px;
+        border: 2px solid black;
         background-color: rgb(55, 54, 54);
         border-radius: 25px;
-        color: var(--light-gold);
+        color: var(--adobe-gold-gold);
+        box-shadow: 5px 6px 0px 0px var(---mild-dark-gold);
     }
+        
     
     .icon-title {
         width: 100%;
         font-weight: bold;
         font-size: 50px;
+        color: var(--adobe-gold-gold);
+        padding: 0px 0 40px 0;
     }
     .page-icon-image {
         width: 200px;
         height: 200px;
 
+    }
+
+    .page-icon:hover {
+        /* Smaller Glow */
+        /* -webkit-box-shadow: 0px 0px 56px 19px #F9B262;
+        -moz-box-shadow: 0px 0px 56px 19px #F9B262;
+        box-shadow: 0px 0px 56px 19px #F9B262; */
+
+        border: 2px solid var(--adobe-dark-gold);
+        /* background-color: var(--adobe-gold-gold); */
+
+        /* Sharper Glow */
+        /* -webkit-box-shadow:0px 0px 51px 5px #F0C524;
+        -moz-box-shadow: 0px 0px 51px 5px #F0C524;
+        box-shadow: 0px 0px 51px 5px #F0C524; */
+
+
+        /* Bigger Glow */
+        /* -webkit-box-shadow:0px 0px 116px 42px #F9B262;
+        -moz-box-shadow: 0px 0px 116px 42px #F9B262;
+        box-shadow: 0px 0px 116px 42px #F9B262; */
+
+        -webkit-box-shadow: 0px 5px 2px 2px #F9B262;
+        -moz-box-shadow: 0px 5px 2px 2px #F9B262;
+        box-shadow: 2px 5px 11px 2px #F9B262;
     }
 
     .reset-storage-container {
@@ -485,6 +524,17 @@
         cursor: pointer;
 
         background-color: rgb(55, 54, 54);
+    }
+    .reset-storage-button:hover {
+        -webkit-box-shadow: 0px 2px 90px 2px #B5551F;
+        -moz-box-shadow: 0px 2px 90px 2px #B5551F;
+        box-shadow: 0px 2px 90px 2px #B5551F;
+    
+        width: 203px;
+        height: 83px;
+        /* color: var(--adobe-gold-gold); */
+        font-size: 16.5px;
+
     }
 
 }

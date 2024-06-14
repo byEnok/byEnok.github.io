@@ -4,13 +4,14 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         color: white;
     }
 
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        --mild-dark-gold: rgb(184, 122, 48, 0.4);
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
 
@@ -73,7 +74,7 @@
         text-shadow: 1px var(--adobe-gold-gold);
         font-size: 35px;
         gap: 2.5rem;
-        transition: font-size 1s;
+        transition: font-size 0.3s;
     }
     
     .nav-container > a:visited {
@@ -91,13 +92,13 @@
         animation-direction: normal;
         color: var(--adobe-yellow-gold);
     
-        font-size: 45px;
-        gap: 2.5rem;
+        font-size: 38px;
+        /* gap: 2.5rem; */
     }
     @keyframes hover-jump {
         0% {transform: translateY(0)} 
-        50% {transform: translateY(-8px)}
-        100% {transform: translateY(1)}
+        50% {transform: translateY(-1px)}
+        100% {transform: translateY(0)}
     }
     
     
@@ -113,14 +114,16 @@
     .shop-header {
         display: flex;
         background-color: rgb(33, 33, 33);
+        /* background-color: rgb(40, 39, 39); */
         justify-content: center;
         align-items: center;
         padding: 10px 0;
     }
     
     .shop-icon {
-        width: 280px;
-        height: 280px;
+        width: 230px;
+        height: 230px;
+        padding: 20px 0 20px 0;
     }
     
     .shop-container {
@@ -128,7 +131,8 @@
         flex-direction: column;
         align-items: center;
         margin: 25px 0 25px 0 ;
-        gap: 2rem;
+        gap: 1rem;
+        margin-bottom: 50px;
     }
 
     
@@ -136,21 +140,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
 }
     
     .shop-bank-balance-card {
         display: flex;
         /* margin-bottom: 50px; */
 
-        font-size: 50px;
+        font-size: 30px;
         padding: 30px;
-        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        text-shadow: 0.5px 0.5px 1.5px var(--adobe-gold-gold);
         
 
         color: whitesmoke;
         background-color: var(--mild-dark);
         border-radius: 25px;
-        box-shadow: 0px 0px 15px var(---mild-dark-gold);
+        box-shadow: 10px 5px 10px var(--mild-dark-gold);
+        /* box-shadow: 3.5px 2px 2px var(---mild-dark-gold); */
 
     }
 
@@ -182,19 +189,22 @@
         
         margin: auto;
         padding: 10px;
-        min-height: 350px;
+        /* min-height: 350px; */
         min-width: 300px;
         max-width: 300px;
 
         background-color: var(--mild-dark);
         border-radius: 25px;
-        box-shadow: 10px 5px 5px var(---mild-dark-gold);
+        box-shadow: 10px 5px 10px var(--mild-dark-gold);
+        /* box-shadow: 3.5px 2px 2px var(---mild-dark-gold); */
+        /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
     } 
     
     .computer-selector-container:hover {
-        -webkit-box-shadow:0px 0px 64px 12px #F9B262;
-        -moz-box-shadow: 0px 0px 65px 12px #F9B262;
-        box-shadow: 0px 0px 64px 12px #F9B262;
+        -webkit-box-shadow:0px 0px 10px 3px #F9B262;
+        -moz-box-shadow: 0px 0px 10px 3px #F9B262;
+        box-shadow: 10px 5px 10px #F9B262;
+        /* box-shadow: 0px 0px 10px 3px #F9B262; */
     }
 
     .computer-selector-title {
@@ -203,15 +213,16 @@
     }
 
     .computer-buy-container:hover {
-        -webkit-box-shadow:0px 0px 64px 12px #F9B262;
-        -moz-box-shadow: 0px 0px 65px 12px #F9B262;
-        box-shadow: 0px 0px 64px 12px #F9B262;
+        -webkit-box-shadow: 0px 0px 10px 3px #F9B262;
+        -moz-box-shadow: 0px 0px 10px 3px #F9B262;
+        box-shadow: 10px 5px 10px #F9B262;
+        /* box-shadow: 0px 0px 10px 3px #F9B262; */
     }
 
  
     .computer-buy-container {
         display: flex;
-        min-height: 350px;
+        /* min-height: 350px; */
         min-width: 1000px;
         max-width: 1000px;
         padding: 15px;
@@ -220,7 +231,9 @@
         color: whitesmoke;
         background-color: var(--mild-dark);
         border-radius: 25px;
-        box-shadow: 10px 5px 5px var(---mild-dark-gold);
+        
+        box-shadow: 10px 5px 10px var(--mild-dark-gold);
+        /* box-shadow: 3.5px 2px 2px var(---mild-dark-gold); */
     }
 
     .computer-buy-bg {
@@ -302,13 +315,14 @@
     html, body{
         margin: 0;
         padding: 0;
-        background-color: grey;
+        /* background-color: grey; */
+        background-color: rgb(33, 33, 33);
         color: white;
     }
 
     :root {
         --dark-gold: #b5711e;
-        ---mild-dark-gold: #b87a30;
+        ---mild-dark-gold: rgb(184, 122, 48, 0.4);
         --light-gold: #f9b262;
         --mild-dark: rgb(53, 51, 51);
 
@@ -405,11 +419,11 @@
     }
 
     .shop-bank-balance-container {
-        display: flex;
+        display: flex; 
         margin-top: 25px;
         justify-content: center;
         color: whitesmoke;
-        background-color: var(--mild-dark);
+        /* background-color: var(--mild-dark); */
         border-radius: 25px;
         box-shadow: 0px 0px 15px var(---mild-dark-gold);
     }
@@ -417,6 +431,8 @@
         font-size: 25px;
         padding: 15px;
         text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        text-shadow: 0.5px 0.5px 30px var(--adobe-gold-gold);
+        /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
     }
     .bottom-cards-container {
         display: flex;
@@ -450,8 +466,11 @@
         margin-top: 15px;
         /* padding: 10px; */
         border-radius: 25px;
-        min-width: 100%;
+        /* min-width: 100%;
+        min-height: 100%; */
+
         min-height: 100%;
+        max-height: 100%;
     }
 
     .features-title {
