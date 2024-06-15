@@ -6,7 +6,7 @@
         padding: 0;
         /* background-color: grey; */
         background-color: rgb(33, 33, 33);
-        /* color: white; */
+        color: white;
     }
 
     :root {
@@ -29,10 +29,10 @@
         --theme-dark-green:#30b454;
     }
 
-    button:hover {
+    /* button:hover {
         background-color: var(--adobe-gold-gold);
         color: black; 
-    }
+    } */
 
     .nav-container {
         display: flex;

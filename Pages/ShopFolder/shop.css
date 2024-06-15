@@ -28,11 +28,10 @@
 
     }
 
-    button:hover {
+    /* button:hover {
         background-color: var(--adobe-gold-gold);
         color: black; 
-        
-    }
+    } */
     .nav-container {
         display: flex;
         justify-content: space-around;
