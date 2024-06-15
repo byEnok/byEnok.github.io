@@ -48,11 +48,26 @@ function setLoanStatusAndBalance() {
 function verifyLoanInput() {
     const activeLoan = setLoanStatusAndBalance()
     const cloudBankBalance = setBankBalance()
-    let loanAmount = prompt("Enter Loan Amount", 500);
 
-    if (loanAmount !== null && loanAmount.trim() !== "" && !isNaN(loanAmount)) {
+    
+    const loanInputContainer = document.getElementById("loan-input-container")
+    loanInputContainer.style.display = "flex"
+
+    const loanInputExitButton = document.getElementById("loan-input-exit-button")
+    loanInputExitButton.addEventListener('click', () => {
+        loanInputContainer.style.display = "none"
+    })
+
+    const loanInput = document.getElementById("loan-input")
+    const loanInputButton = document.getElementById("loan-input-button")
+    
+    loanInputButton.addEventListener('click', () => {
+        let loanAmount = parseInt(loanInput.value)
+
+        // if (loanAmount !== null && loanAmount.trim() !== "" && !isNaN(loanAmount)) {
+        if (loanAmount !== null && !isNaN(loanAmount)) {
         loanAmount = parseInt(loanAmount)
-        if ( Number.isInteger(loanAmount) && !activeLoan && loanAmount <= cloudBankBalance * 2 ) {
+        if ( Number.isInteger(loanAmount) && loanAmount > 0 && !activeLoan && loanAmount <= cloudBankBalance * 2 ) {
             let currentBalance = cloudBankBalance 
             let newBalance = currentBalance + loanAmount
 
@@ -61,10 +76,12 @@ function verifyLoanInput() {
 
             updateBalances()
             alert(`Your loan was granted for ${loanAmount} NOK!`)
+            loanInputContainer.style.display = "none"
 
         }
         else if ( Number.isInteger(loanAmount) && activeLoan ) {
             alert("You allready have a active loan with us. \nYou must pay it down before you are allowed another.")
+            loanInputContainer.style.display = "none"
         }
         else if ( Number.isInteger(loanAmount) && !activeLoan && loanAmount > cloudBankBalance * 2 ) {
             alert("You cannot loan more than twice your Bank Balance! \nYou must enter a lower amount. ")
@@ -76,7 +93,45 @@ function verifyLoanInput() {
     else {
         alert("We don't loan out that! \nYou must enter a number!") 
     }
+    // loanInputContainer.style.display = "none"
     return loanAmount
+
+})
+
+
+
+
+    // Old loan input getter
+    // let loanAmount = prompt("Enter Loan Amount", 500);
+
+    // Condition used for when loanAmount was from prompt
+    // if (loanAmount !== null && loanAmount.trim() !== "" && !isNaN(loanAmount)) {
+    //     loanAmount = parseInt(loanAmount)
+    //     if ( Number.isInteger(loanAmount) && !activeLoan && loanAmount <= cloudBankBalance * 2 ) {
+    //         let currentBalance = cloudBankBalance 
+    //         let newBalance = currentBalance + loanAmount
+
+    //         localStorage.setItem('bankBalance', newBalance.toString())
+    //         localStorage.setItem('loanBalance', loanAmount.toString())
+
+    //         updateBalances()
+    //         alert(`Your loan was granted for ${loanAmount} NOK!`)
+
+    //     }
+    //     else if ( Number.isInteger(loanAmount) && activeLoan ) {
+    //         alert("You allready have a active loan with us. \nYou must pay it down before you are allowed another.")
+    //     }
+    //     else if ( Number.isInteger(loanAmount) && !activeLoan && loanAmount > cloudBankBalance * 2 ) {
+    //         alert("You cannot loan more than twice your Bank Balance! \nYou must enter a lower amount. ")
+    //     } 
+    //     else {
+    //         alert("We don't loan out that! \nYou must enter a number!")    
+    //     }
+    // } 
+    // else {
+    //     alert("We don't loan out that! \nYou must enter a number!") 
+    // }
+    // return loanAmount
 };
 
 const bankFunctions = {

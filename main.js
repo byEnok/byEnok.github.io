@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Work Page Setup
-    const workPage = document.location.pathname
+    // const workPage = document.location.pathname
     // if (workPage === "/Main/Work/work.html") {
     if (document.body.dataset.page === 'work') {
 
@@ -168,15 +168,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Repay Loan Button
         const repayLoanButton = document.getElementById("repay-loan-button")
+        const workBalanceEl = document.getElementById("work-balance")
+
         repayLoanButton.addEventListener('click', () => {
-            const workBalanceEl = document.getElementById("work-balance")
+
+            const moneyEarned = workBalanceEl.innerHTML
+            if (parseInt(moneyEarned) > 0) {
+                let cloudLoanBalance = parseInt(localStorage.getItem('loanBalance'))
+                let currentWorkBalance = parseInt(workBalanceEl.innerHTML)
+
+                currentWorkBalance <= cloudLoanBalance ? workFunctions.everythingToLoan() : workFunctions.someToLoan()
+                const loanButtonStatus = workFunctions.showOrHideRepayLoanButton()
+
+                if (!loanButtonStatus) alert("You've paid back your loan in full")
+
+            } 
+
+            //     if (cloudLoanBalance === 0) alert("You've paid back your loan in full \nWe hope to see you again!")
+            // } else {
+            //     prompt("there is no money to transfer")
+            // }
     
             // let cloudBankBalance = parseInt(localStorage.getItem('bankBalance')) || 0
-            let cloudLoanBalance = parseInt(localStorage.getItem('loanBalance'))
-            let currentWorkBalance = parseInt(workBalanceEl.innerHTML)
-            currentWorkBalance <= cloudLoanBalance ? workFunctions.everythingToLoan() : workFunctions.someToLoan()
-            workFunctions.showOrHideRepayLoanButton()
-            alert("You've paid back your loan in full! \nWe hope to see you again!")
+            // let cloudLoanBalance = parseInt(localStorage.getItem('loanBalance'))
+            // let currentWorkBalance = parseInt(workBalanceEl.innerHTML)
+            // currentWorkBalance <= cloudLoanBalance ? workFunctions.everythingToLoan() : workFunctions.someToLoan()
+            // workFunctions.showOrHideRepayLoanButton()
+            // alert("You've paid back your loan in full! \nWe hope to see you again!")
         });
     }
 

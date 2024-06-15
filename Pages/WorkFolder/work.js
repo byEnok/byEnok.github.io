@@ -9,6 +9,7 @@ function checkLoanStatus() {
 function showOrHideRepayLoanButton() {
     const loanStatus = checkLoanStatus()
     loanStatus ? showLoanButton() : hideLoanButton() 
+    return loanStatus
 }
 
 function showLoanButton() {
