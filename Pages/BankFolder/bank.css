@@ -131,9 +131,9 @@
     }
 
     .bank-icon {
-        width: 230px;
-        height: 230px;
-        padding: 20px 0 20px 0;
+        width: 150px;
+        height: 150px;
+        padding: 10px 0 0 0;
     }
 
     .bank-card-container {
